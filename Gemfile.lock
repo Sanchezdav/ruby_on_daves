@@ -1,0 +1,26 @@
+PATH
+  remote: .
+  specs:
+    ruby_on_daves (0.0.1)
+      rack (~> 2.2)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    minitest (5.14.2)
+    rack (2.2.3)
+    rack-test (1.1.0)
+      rack (>= 1.0, < 3)
+    rake (12.3.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  minitest (~> 5.0)
+  rack-test
+  rake (~> 12.0)
+  ruby_on_daves!
+
+BUNDLED WITH
+   2.1.4
