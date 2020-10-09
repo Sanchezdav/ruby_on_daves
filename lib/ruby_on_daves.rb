@@ -1,4 +1,3 @@
-require "ruby_on_daves/array"
 require "ruby_on_daves/version"
 
 module RubyOnDaves
