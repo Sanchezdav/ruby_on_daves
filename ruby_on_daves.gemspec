@@ -28,6 +28,6 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_runtime_dependency 'rack', '~> 2.2'
-  spec.add_development_dependency 'rack-test'
-  spec.add_development_dependency 'minitest'
+  spec.add_development_dependency 'rack-test', '~> 1.1'
+  spec.add_development_dependency 'minitest', '~> 5.14.2'
 end
