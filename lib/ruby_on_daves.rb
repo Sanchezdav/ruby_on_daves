@@ -1,5 +1,7 @@
 require "ruby_on_daves/version"
 require "ruby_on_daves/routing"
+require "ruby_on_daves/util"
+require "ruby_on_daves/dependencies"
 
 module RubyOnDaves
   class Application
