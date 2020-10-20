@@ -1,6 +1,15 @@
 require_relative "test_helper"
 
+class TestController < RubyOnDaves::Controller
+  def index
+    "Hello!"
+  end
+end
+
 class TestApp < RubyOnDaves::Application
+  def get_controller_and_action(env)
+    [TestController, "index"]
+  end
 end
 
 class RubyOnDavesAppTest < Minitest::Test
@@ -11,7 +20,7 @@ class RubyOnDavesAppTest < Minitest::Test
   end
 
   def test_request
-    get "/"
+    get "/example/route"
 
     assert last_response.ok?
     body = last_response.body
