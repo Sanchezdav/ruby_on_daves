@@ -2,6 +2,7 @@ require "ruby_on_daves/version"
 require "ruby_on_daves/routing"
 require "ruby_on_daves/util"
 require "ruby_on_daves/dependencies"
+require "ruby_on_daves/controller"
 
 module RubyOnDaves
   class Application
@@ -15,16 +16,6 @@ module RubyOnDaves
       text = controller.send(act)
       [200, {'Content-Type' => 'text/html'},
         [text]]
-    end
-  end
-
-  class Controller
-    def initialize(env)
-      @env = env
-    end
-
-    def env
-      @env
     end
   end
 end
