@@ -1,7 +1,10 @@
 require 'erubis'
+require 'ruby_on_daves/file_model'
 
 module RubyOnDaves
   class Controller
+    include RubyOnDaves::Model
+
     def initialize(env)
       @env = env
     end

@@ -3,6 +3,7 @@ require "ruby_on_daves/routing"
 require "ruby_on_daves/util"
 require "ruby_on_daves/dependencies"
 require "ruby_on_daves/controller"
+require "ruby_on_daves/file_model"
 
 module RubyOnDaves
   class Application
