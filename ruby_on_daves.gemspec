@@ -6,8 +6,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["David Sanchez"]
   spec.email         = ["sanchez.dav90@gmail.com"]
 
-  spec.summary       = %q{A Rack-based web framework.}
-  spec.description   = %q{A Rack-based web framework with some extra juice.}
+  spec.summary       = "A Rack-based web framework."
+  spec.description   = "A Rack-based web framework with some extra juice."
   spec.homepage      = "https://codeando.dev"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
@@ -30,6 +30,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'rack', '~> 2.2'
   spec.add_runtime_dependency 'erubis', '~> 2.7'
   spec.add_runtime_dependency 'multi_json', '~> 1.15'
+  spec.add_runtime_dependency 'sqlite3', '~> 1.4.2'
   spec.add_development_dependency 'rack-test', '~> 1.1'
   spec.add_development_dependency 'minitest', '~> 5.14.2'
 end
