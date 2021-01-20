@@ -8,6 +8,7 @@ module RubyOnDaves
 
     def initialize(env)
       @env = env
+      @routing_params = {}
     end
 
     def env
@@ -34,7 +35,7 @@ module RubyOnDaves
     end
 
     def params
-      request.params
+      request.params.merge(@routing_params)
     end
 
     def render(view_name, locals = {})
@@ -48,6 +49,22 @@ module RubyOnDaves
       klass = self.class
       klass = klass.to_s.gsub(/Controller$/, "")
       RubyOnDaves.to_underscore(klass)
+    end
+
+    def dispatch(action, routing_params = {})
+      @routing_params = routing_params
+      text = self.send(action)
+      response = get_response
+
+      if response
+        [response.status, response.headers, [response.body].flatten]
+      else
+        [200, {'Content-Type' => 'text/html'}, [text].flatten]
+      end
+    end
+
+    def self.action(action, routing_params = {})
+      proc { |e| self.new(e).dispatch(action, routing_params) }
     end
   end
 end
